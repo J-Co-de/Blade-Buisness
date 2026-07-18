@@ -1,0 +1,56 @@
+/* Baseplate CSS for Blade Business
+	 - CSS Reset (modern)
+	 - CSS Variables (theme)
+	 - Typography, layout, utility classes
+*/
+@import url("CSS_Components/nav.css");
+@import url("CSS_Components/hero.css");
+/* Reset / Normalize (minimal) */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Variables */
+:root {
+  --business-gold: #ffb900;
+  --business-white: #f9f9f9;
+  --business-grey: #adadaf;
+   --background: #0a0a0c;
+  --bg: #0a0a0c;
+  --text: #f9f9f9;
+  --gap: 1rem;
+  --muted: #c7c7c7;
+  --font-header: "Cinzel", serif;
+  --font-body: "Inter", sans-serif;
+}
+.business-name-gold {
+  color: var(--business-gold);
+}
+.business-name-white {
+  color: var(--business-white);
+}
+
