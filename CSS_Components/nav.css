@@ -2,15 +2,20 @@
    NAVIGATION BAR STYLES
 ========================= */
 nav {
+  position:fixed;
+  top:0;
+  left:0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 2vh 1vw;
+  padding: 1rem;
   background-color: var(--background);
   border-bottom: 1px solid var(--business-grey);
-  min-height: 6vh;
+  min-height: max-content;
+  z-index:5;
 }
+
 
 /* =========================
    BUSINESS NAME + LOGO
@@ -18,11 +23,14 @@ nav {
 nav .business-name {
   display: flex;
   align-items: center;
-  gap: 0.7vw;
+  gap: 0.4ch;
   width: fit-content;
   margin: 0;
   padding: 0;
   font-weight: bold;
+  height: 5vh;
+  z-index:1;
+ 
 }
 
 /* =========================
@@ -44,11 +52,11 @@ nav .links a {
   align-items: center;
   color: var(--business-grey);
   font-weight: 500;
-  font-size: 1.7vw;
+  font-size: clamp(var(--text-xs), 1.8vw, var(--text-xl));
   text-transform: uppercase;
   letter-spacing: 0.05em;
   text-decoration: none;
-  line-height: 1.2;
+  letter-spacing: -0.5px;
 }
 
 nav .links li {
@@ -69,21 +77,16 @@ nav .links .btn.primary {
 ========================= */
 @media (orientation: landscape) {
   nav .business-name span {
-    font-size: 1.7vw;
-    line-height: 0;
-  }
-
-  nav .business-name svg {
-    width: 1.8vw;
-    color: var(--business-gold);
+    font-size: clamp(var(--text-xs), 2.5vw, var(--text-4xl));
   }
 
   nav .links li:hover {
     transform: scale(0.95);
+    opacity: 0.8;
+    transition: 0.5s;
     :not(.btn.primary) {
       border-bottom: 2px solid var(--business-gold);
     }
-    opacity: 0.8;
   }
 
   .hamburger {
@@ -97,12 +100,7 @@ nav .links .btn.primary {
   }
 
   nav .business-name span {
-    font-size: 5vw;
-  }
-
-  nav .business-name svg {
-    width: 5vw;
-    color: var(--business-gold);
+    font-size: clamp(var(--text-md), 5vw, var(--text-4xl));
   }
 
   .hamburger {
