@@ -6,9 +6,10 @@ nav {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 1vh 1vw;
+  padding: 2vh 1vw;
   background-color: var(--background);
-  border-bottom: var(--business-grey) 1px solid;
+  border-bottom: 1px solid var(--business-grey);
+  min-height: 6vh;
 }
 
 /* =========================
@@ -18,8 +19,10 @@ nav .business-name {
   display: flex;
   align-items: center;
   gap: 0.7vw;
-  white-space: nowrap;
-   
+  width: fit-content;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
 }
 
 /* =========================
@@ -28,30 +31,37 @@ nav .business-name {
 nav .links {
   display: flex;
   align-items: center;
-  gap: 1vw;
-  list-style: none;
   flex-wrap: nowrap;
+  gap: 1vw;
+  height: 5vh;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 nav .links a {
+  display: inline-flex;
+  align-items: center;
   color: var(--business-grey);
   font-weight: 500;
+  font-size: 1.7vw;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  font-size: 1.7vw;
   text-decoration: none;
-  line-height: 0;
+  line-height: 1.2;
 }
+
 nav .links li {
-  
-  height:100%;
+  display: flex;
+  align-items: center;
 }
 
 nav .links .btn.primary {
-  padding: 0.25vw 0.5vw;
+  padding: 0.125vw 0.25vw;
   background: var(--business-gold);
   color: var(--background);
   white-space: nowrap;
+  justify-self: center;
 }
 
 /* =========================
@@ -59,19 +69,23 @@ nav .links .btn.primary {
 ========================= */
 @media (orientation: landscape) {
   nav .business-name span {
-    font-size: 2.5vw;
+    font-size: 1.7vw;
     line-height: 0;
   }
 
   nav .business-name svg {
-    width: 2.25vw;
+    width: 1.8vw;
     color: var(--business-gold);
   }
+
   nav .links li:hover {
     transform: scale(0.95);
-    border-bottom: 2px solid var(--business-gold);
+    :not(.btn.primary) {
+      border-bottom: 2px solid var(--business-gold);
+    }
     opacity: 0.8;
   }
+
   .hamburger {
     display: none;
   }
@@ -92,10 +106,14 @@ nav .links .btn.primary {
   }
 
   .hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5vw;
     background: none;
     border: none;
-    width: 5vw;
   }
+
   .hamburger svg {
     color: var(--business-grey);
   }

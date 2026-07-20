@@ -1,4 +1,66 @@
-#hero {
+header {
+  position: relative;
+  width: 100%;
+  background-color: var(--background);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0.3;
+  z-index: -1;
+  width: 60vw;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  -webkit-mask: linear-gradient(
+      270deg,
+      rgba(0, 0, 0, 1) 60%,
+      rgba(0, 0, 0, 0) 100%
+    )
+    0 0 / 100% 100% no-repeat;
+  mask: linear-gradient(270deg, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%) 0
+    0 / 100% 100% no-repeat;
+}
+
+#hero-content {
+  width: 40vw;
+  height: 100%;
+  background-color: var(--background);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+.tagline {
+    color:var(--business-gold);
     width:100%;
-    background-color: var(--background);
+    display:flex;
+    justify-content:center;    
+    align-items:center;
+    gap:1vw;
+}
+.tagline hr {
+    border-color: var(--business-gold);
+    width:3vw;
+    height:0;
+}
+
+@media (orientation: landscape) {
+  header::before {
+    background-image: url("../Images/landscape-hero.png");
+  }
+}
+
+@media (orientation: portrait) {
+  header::before {
+    background-image: url("../Images/landscape-hero.png");
+  }
 }

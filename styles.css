@@ -39,13 +39,18 @@ a {
   --business-gold: #ffb900;
   --business-white: #f9f9f9;
   --business-grey: #adadaf;
-   --background: #0a0a0c;
+  --background: #0a0a0c;
   --bg: #0a0a0c;
   --text: #f9f9f9;
   --gap: 1rem;
   --muted: #c7c7c7;
-  --font-header: "Cinzel", serif;
-  --font-body: "Inter", sans-serif;
+
+  --font-header: "Roboto Slab", serif;
+  --font-header-weight: 700;
+
+  --font-body: "Roboto", sans-serif;
+  --font-body-weight: 400;
+  --font-body-medium: 500;
 }
 .business-name-gold {
   color: var(--business-gold);
@@ -54,3 +59,30 @@ a {
   color: var(--business-white);
 }
 
+body {
+  font-family: var(--font-body);
+  font-weight: var(--font-body-weight);
+  font-size: var(--fs-base)
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.logo-wordmark,
+.section-title,
+.stat-number {
+  font-family: var(--font-header);
+  font-weight: var(--font-header-weight);
+}
+
+nav a,
+label,
+input,
+textarea,
+select {
+  font-family: var(--font-body);
+  font-weight: var(--font-body-medium);
+}

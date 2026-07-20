@@ -2,7 +2,7 @@
 // Element References
 // ===============================
 const nav = document.querySelector(".navbar");
-const hero = document.getElementById("hero");
+const header = document.querySelector("header");
 
-const getHeroHeight= () => hero.style.height = `${window.innerHeight - nav.getBoundingClientRect().height}px`;
+const getHeroHeight= () => header.style.height = `${window.innerHeight - nav.getBoundingClientRect().height}px`;
 getHeroHeight();
