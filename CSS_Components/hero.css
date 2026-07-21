@@ -3,13 +3,7 @@ header {
   width: 100%;
   background-color: var(--background);
   isolation: isolate;
-  display: grid;
-  grid-template-areas:
-    "text-content portrait"
-    "text-content portrait"
-    "button vacant";
-  justify-items: center; /* horizontal centering of items */
-  align-items: center;
+  padding: 0 2.5vw;
 }
 
 header::before {
@@ -29,8 +23,7 @@ header::before {
 
 #hero-content {
   width: 50vw;
-  height: 100%;
-  padding: 5%;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,8 +37,9 @@ header::before {
   display: flex;
   justify-content: start;
   align-items: center;
-  gap: 1vw;
-  margin-bottom:3vh;
+  gap: 1ch;
+  margin-top: 3vh;
+  font-size: clamp(var(--text-sm), 1vw, var(--text-2xl));
 }
 .tagline hr {
   border-color: var(--business-gold);
@@ -60,12 +54,14 @@ header::before {
 }
 
 #hero-content h1 span {
-  font-size: clamp(var(--text-lg), 5vw, var(--text-6xl));
+  font-size: max(var(--text-3xl), 6.5vw, 8vh);
   font-weight: 800;
 }
 #hero-content p {
   margin-top: 3vh;
   color: var(--business-grey);
+  width: 50vw;
+  font-size: clamp(var(--text-sm), 1vw, var(--text-lg));
 }
 .portrait {
   height: 70%;
@@ -78,32 +74,34 @@ header::before {
 .portrait img {
   width: 25vw;
   border: var(--background) 3px solid;
-  margin-bottom:3vh;
+  margin-bottom: 3vh;
 }
 .portrait figcaption {
   display: flex;
   flex-direction: column;
   color: var(--business-white);
-  font-size: var(--text-sm); /* 18px */
+  font-size: clamp(var(--text-sm), 1.2vw, var(--text-lg));
   width: 25vw;
 }
 .portrait figcaption span {
-  font-size: var(--text-xs);
+  font-size: clamp(var(--text-xs), 1vw, var(--text-sm));
   color: var(--business-grey);
 }
 .buttons {
   grid-area: button;
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
-  height: 20vh;
+  justify-content: start;
+  align-items: center;
+  gap: 2vw;
 }
 header a {
-  width: 20vw;
-  height: 40%;
+  width: 39vw;
+  height: 7vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: clamp(var(--text-sm), 2vw, var(--text-3xl));
 }
 .book-btn {
   background-color: var(--business-gold);
@@ -114,14 +112,72 @@ header a {
   border: var(--business-grey) 1px solid;
   color: var(--business-grey);
 }
+.stats {
+  grid-area: stats;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  height: 15vh;
+  font-size: clamp(var(--text-xs), 1vw, var(--text-2xl));
+}
+.stats li {
+  display: flex;
+  justify-content: center;
+  gap: 1ch;
+  align-items: center;
+  color: var(--business-grey);
+}
+.yellow-diamond {
+  display: inline;
+  width: 0.375rem; /* 6px */
+  height: 0.375rem; /* 6px */
+  background-color: #fbbf24;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
 @media (orientation: landscape) {
+  header {
+    display: grid;
+    grid-template-areas:
+      "text-content portrait"
+      "text-content portrait"
+      "button vacant"
+      "stats vacant";
+    justify-items: start; /* horizontal centering of items */
+    align-items: center;
+  }
   header::before {
     background-image: url("../Images/landscape-hero.jpg");
+  }
+  #hero-content {
+    width: 70vw;
   }
 }
 
 @media (orientation: portrait) {
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
   header::before {
     background-image: url("../Images/landscape-hero.png");
+  }
+  #hero-content {
+    width: 90vw;
+  }
+  .portrait {
+    display: none;
+  }
+  #hero-content h1 {
+    margin-top: 5vh;
+  }
+  #hero-content p {
+    width: 80vw;
+  }
+  .stats {
+    width: 95%;
   }
 }
