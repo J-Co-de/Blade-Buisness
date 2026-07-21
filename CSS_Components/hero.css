@@ -2,8 +2,14 @@ header {
   position: relative;
   width: 100%;
   background-color: var(--background);
-  overflow: hidden;
   isolation: isolate;
+  display: grid;
+  grid-template-areas:
+    "text-content portrait"
+    "text-content portrait"
+    "button vacant";
+  justify-items: center; /* horizontal centering of items */
+  align-items: center;
 }
 
 header::before {
@@ -11,51 +17,106 @@ header::before {
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 0;
-  opacity: 0.3;
+  left: 0;
+  opacity: 0.1;
   z-index: -1;
-  width: 60vw;
+  width: 100%;
   pointer-events: none;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  -webkit-mask: linear-gradient(
-      270deg,
-      rgba(0, 0, 0, 1) 60%,
-      rgba(0, 0, 0, 0) 100%
-    )
-    0 0 / 100% 100% no-repeat;
-  mask: linear-gradient(270deg, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%) 0
-    0 / 100% 100% no-repeat;
 }
 
 #hero-content {
-  width: 40vw;
+  width: 50vw;
   height: 100%;
-  background-color: var(--background);
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  grid-area: text-content;
 }
 
 .tagline {
-    color:var(--business-gold);
-    width:100%;
-    display:flex;
-    justify-content:center;    
-    align-items:center;
-    gap:1vw;
+  color: var(--business-gold);
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1vw;
+  margin-bottom:3vh;
 }
 .tagline hr {
-    border-color: var(--business-gold);
-    width:3vw;
-    height:0;
+  border-color: var(--business-gold);
+  width: 3vw;
+  height: 0;
 }
 
+#hero-content h1 {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+#hero-content h1 span {
+  font-size: clamp(var(--text-lg), 5vw, var(--text-6xl));
+  font-weight: 800;
+}
+#hero-content p {
+  margin-top: 3vh;
+  color: var(--business-grey);
+}
+.portrait {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  grid-area: portrait;
+}
+.portrait img {
+  width: 25vw;
+  border: var(--background) 3px solid;
+  margin-bottom:3vh;
+}
+.portrait figcaption {
+  display: flex;
+  flex-direction: column;
+  color: var(--business-white);
+  font-size: var(--text-sm); /* 18px */
+  width: 25vw;
+}
+.portrait figcaption span {
+  font-size: var(--text-xs);
+  color: var(--business-grey);
+}
+.buttons {
+  grid-area: button;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  height: 20vh;
+}
+header a {
+  width: 20vw;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.book-btn {
+  background-color: var(--business-gold);
+  color: var(--background);
+}
+.view-btn {
+  background-color: transparent;
+  border: var(--business-grey) 1px solid;
+  color: var(--business-grey);
+}
 @media (orientation: landscape) {
   header::before {
-    background-image: url("../Images/landscape-hero.png");
+    background-image: url("../Images/landscape-hero.jpg");
   }
 }
 

@@ -1,13 +1,11 @@
 // ===============================
 // Element References
 // ===============================
-const nav = document.querySelector(".navbar");
+const nav = document.querySelector("nav");
 const header = document.querySelector("header");
-const arrowObject = document.querySelector(".arrow-object");
-const getHeroHeight = () =>
-  header.style.height = `${window.innerHeight - nav.getBoundingClientRect().height}px`;
+const getHeroHeight = () => {
+  const navHeight = nav.getBoundingClientRect().height;
+  header.style.height = `${window.innerHeight - navHeight}px`;
+  header.style.marginTop = `${navHeight}px`
+};
 getHeroHeight();
-const getArrowHeight = () => {
-    arrowObject.style.height = `${nav.getBoundingClientRect().height}px`;
-}
-getArrowHeight();
