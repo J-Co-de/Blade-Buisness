@@ -13,7 +13,6 @@ nav {
   background-color: var(--background);
   border-bottom: 1px solid var(--business-grey);
   z-index: 5;
-  
 }
 
 /* =========================
@@ -47,7 +46,7 @@ nav .links a {
   align-items: center;
   color: var(--business-grey);
   font-weight: 500;
-  font-size: clamp(var(--text-xs), 2lvw, var(--text-5xl)); 
+  font-size: clamp(var(--text-xs), 2lvw, var(--text-5xl));
   text-decoration: none;
   letter-spacing: -0.5px;
 }
@@ -76,9 +75,9 @@ nav .links .btn.primary {
     transform: scale(0.95);
     opacity: 0.8;
     transition: 0.5s;
-  }
-  nav .links li:hover:not(.btn.primary) {
-    border-bottom: 2px solid var(--business-gold);
+    & a:not(.btn.primary) {
+      border-bottom: 2px solid var(--business-gold);
+    }
   }
 
   .hamburger {

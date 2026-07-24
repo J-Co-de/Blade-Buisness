@@ -7,19 +7,26 @@
     <title>Patina Blade Restorations</title>
   </head>
   <body>
-    <nav>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <nav aria-label="Primary">
       <h2 class="business-name">
         <span class="business-name-white">PATINA</span>
         <span class="business-name-gold">BLADE RESTORATIONS</span>
       </h2>
-      <ul class="links" aria-label="Main navigation">
+      <ul class="links" aria-label="Main navbar">
         <li><a href="#services">Services</a></li>
         <li><a href="#process">Process</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#testimonials">Testimonials</a></li>
         <li><a class="btn primary" href="#quote">Get a Quote</a></li>
       </ul>
-      <button class="hamburger" aria-expanded="false" aria-label="Open Menu">
+      <button
+        class="hamburger"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-navigation"
+        aria-label="Open menu"
+      >
         <svg
           aria-hidden="true"
           xmlns="https://www.w3.org/2000/svg"
@@ -39,7 +46,7 @@
     <header>
       <div id="hero-content">
         <div class="tagline">
-          <hr />
+          <hr aria-hidden="true" />
           <span>BLADE RESTORATION SPECIALISTS</span>
         </div>
         <h1>
@@ -52,8 +59,8 @@
           while preparing it for years of reliable use.
         </p>
         <div class="buttons">
-          <a href="" class="book-btn">Book Service</a>
-          <a href="" class="view-btn">View Services</a>
+          <a href="#quote" class="book-btn">Book Service</a>
+          <a href="#services" class="view-btn">View Services</a>
         </div>
         <ul class="stats">
           <li>
@@ -66,17 +73,19 @@
           </li>
           <li>
             <div class="yellow-diamond"></div>
-            Cost-Free Diagnosis
+            Cost Free Diagnosis
           </li>
         </ul>
       </div>
 
       <figure class="portrait">
-        <img src="/Images/portrait.png" />
+        <img
+          src="./Images/portrait.png"
+          alt="Portrait of Bradley King, founder of Patina Blade Restorations"
+        />
         <figcaption>
-          Bradley King<span
-            >Blade Restorer & Founder</span
-          >
+          <span class="portrait-name">Bradley King</span>
+          <span class="portrait-title">Blade Restorer & Founder</span>
         </figcaption>
       </figure>
     </header>
