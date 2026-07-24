@@ -90,7 +90,6 @@ header::before {
   margin-top: 3lvh;
   color: var(--business-grey);
   font-size: clamp(var(--text-md), 2vw, var(--text-5xl));
-
   @media (orientation: portrait) {
     width: 80vw;
   }
@@ -147,11 +146,11 @@ header::before {
   display: flex;
   flex-direction: column;
   color: var(--business-white);
-  font-size: clamp(var(--text-sm), 1.2vw, var(--text-lg));
+  font-size: clamp(var(--text-md), 2vw, var(--text-5xl));
 }
 
 .portrait figcaption span {
-  font-size: clamp(var(--text-xs), 1vw, var(--text-sm));
+  font-size: clamp(var(--text-xs), 1.5vw, var(--text-3xl));
   color: var(--business-grey);
 }
 
@@ -196,8 +195,8 @@ header a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: clamp(var(--text-sm), 2vw, var(--text-5xl));
-
+  font-size: clamp(var(--text-xs), 1.8vw, var(--text-5xl));
+  gap: 1vw;
   @media (orientation: landscape) {
     width: 100%;
   }
@@ -213,11 +212,12 @@ header a {
   align-items: center;
   gap: 1ch;
   color: var(--business-grey);
+  text-wrap:nowrap;
 }
 
 .yellow-diamond {
-  width: 0.375rem;
-  height: 0.375rem;
+  width: 1vw;
+  height: 1vw;
   background-color: #fbbf24;
   transform: rotate(45deg);
   flex-shrink: 0;
