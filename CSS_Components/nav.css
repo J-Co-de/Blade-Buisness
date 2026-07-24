@@ -9,7 +9,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   background-color: var(--background);
   border-bottom: 1px solid var(--business-grey);
   z-index: 5;
@@ -43,12 +43,11 @@ nav .links {
   list-style: none;
 }
 nav .links a {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   color: var(--business-grey);
   font-weight: 500;
-  font-size: clamp(var(--text-xs), 1.8vw, var(--text-xl));
-  text-transform: uppercase;
+  font-size: clamp(var(--text-xs), 2lvw, var(--text-5xl)); 
   text-decoration: none;
   letter-spacing: -0.5px;
 }
@@ -70,7 +69,7 @@ nav .links .btn.primary {
 ========================= */
 @media (orientation: landscape) {
   nav .business-name span {
-    font-size: clamp(var(--text-xs), 2.5vw, var(--text-4xl));
+    font-size: clamp(var(--text-xs), 2.5vw, var(--text-6xl));
   }
 
   nav .links li:hover {
