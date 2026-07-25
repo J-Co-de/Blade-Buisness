@@ -5,6 +5,7 @@
 */
 @import url("CSS_Components/nav.css");
 @import url("CSS_Components/hero.css");
+
 /* Reset / Normalize (minimal) */
 *,
 *::before,
@@ -13,10 +14,12 @@
   margin: 0;
   padding: 0;
 }
+
 html,
 body {
   height: 100%;
 }
+
 img,
 picture,
 video,
@@ -75,32 +78,36 @@ a {
   --font-body-medium: 500;
 
   /* Typography Scale */
-  --text-xs: 0.75rem;    /* 12px */
-  --text-sm: 0.875rem;   /* 14px */
-  --text-md: 1rem;     /* 16px */
-  --text-lg: 1.125rem;   /* 18px */
-  --text-xl: 1.25rem;    /* 20px */
-  --text-2xl: 1.5rem;    /* 24px */
-  --text-3xl: 1.875rem;  /* 30px */
-  --text-4xl: 2.25rem;   /* 36px */
-  --text-5xl: 3rem;      /* 48px */
-  --text-6xl: 3.75rem;   /* 60px */
+  --text-xs: 0.75rem;
+  /* 12px */
+  --text-sm: 0.875rem;
+  /* 14px */
+  --text-md: 1rem;
+  /* 16px */
+  --text-lg: 1.125rem;
+  /* 18px */
+  --text-xl: 1.25rem;
+  /* 20px */
+  --text-2xl: 1.5rem;
+  /* 24px */
+  --text-3xl: 1.875rem;
+  /* 30px */
+  --text-4xl: 2.25rem;
+  /* 36px */
+  --text-5xl: 3rem;
+  /* 48px */
+  --text-6xl: 3.75rem;
+  /* 60px */
+  --text-7xl: 4.5rem;
+  /*72*/
 }
+
 .business-name-gold {
   color: var(--business-gold);
 }
+
 .business-name-white {
   color: var(--business-white);
-}
-
-body {
-  font-family: var(--font-body);
-  font-weight: var(--font-body-weight);
-  font-size: var(--fs-base);
-  min-height: 100%;
-  background-color: var(--background);
-  color: var(--text);
-  line-height: 1.5;
 }
 
 h1,
@@ -123,35 +130,4 @@ textarea,
 select {
   font-family: var(--font-body);
   font-weight: var(--font-body-medium);
-}
-
-.text-xs {
-  font-size: var(--text-xs);
-}
-.text-sm {
-  font-size: var(--text-sm);
-}
-.text-base {
-  font-size: var(--text-base);
-}
-.text-lg {
-  font-size: var(--text-lg);
-}
-.text-xl {
-  font-size: var(--text-xl);
-}
-.text-2xl {
-  font-size: var(--text-2xl);
-}
-.text-3xl {
-  font-size: var(--text-3xl);
-}
-.text-4xl {
-  font-size: var(--text-4xl);
-}
-.text-5xl {
-  font-size: var(--text-5xl);
-}
-.text-6xl {
-  font-size: var(--text-6xl);
 }
