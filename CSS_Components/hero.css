@@ -1,25 +1,28 @@
 /* ===========================
    HEADER BASE
    =========================== */
-main {
+.hero {
   position: relative;
-  width: 100%;
-  background-color: var(--background);
+  background-color: var(--background-variant1);
   isolation: isolate;
-  padding: 5vw;
-  display: grid;
-  grid-template-areas: "content portrait";
-  align-items: center;
+  padding: 4vw 3vw;
+  border-bottom:1px solid var(--business-dark);
+  display: flex;
 
   @media screen and (orientation: portrait) {
-    display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: start;
+    align-items: center;
+  }
+
+  @media screen and (orientation: landscape) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
-main::before {
+.hero::before {
   content: "";
   position: absolute;
   top: 0;
@@ -30,76 +33,69 @@ main::before {
   z-index: -1;
   pointer-events: none;
   background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
+  background-image: url("../Images/hero.jpg");
 
-  @media (orientation: landscape) {
-    background-image: url("../Images/landscape-hero.jpg");
-  }
-
-  @media (orientation: portrait) {
-    background-image: url("../Images/portrait-hero.png");
-  }
 }
 
 /* ===========================
    HERO CONTENT
    =========================== */
-#hero-content {
-  height: 100%;
+.hero-content {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  gap: 2lvh;
-  justify-self: start;
-  align-items: start;
-  width: 60vw;
-  grid-area: content;
+  gap: 1.5rem;
 }
 
 /* ===========================
    TAGLINE
    =========================== */
 .tagline {
-  width: 80vw;
   display: flex;
   align-items: center;
-  gap: 1ch;
   color: var(--business-gold);
-  justify-content: start;
+  font-size: var(--text-md);
 
   @media screen and (orientation:portrait) {
-    font-size: var(--text-md);
+    gap: 0.5rem;
   }
 
   @media screen and (orientation:landscape) {
-    font-size: var(--text-lg);
+
+    gap: 1rem;
   }
-
-
 }
 
 .tagline .dash {
-  width: 40px;
-  height: 0.3lvh;
+  height: 0.1rem;
   background-color: var(--business-gold);
+
+  @media screen and (orientation:portrait) {
+    width: 20px;
+  }
+
+  @media screen and (orientation:landscape) {
+    width: 30px;
+  }
+
+
 }
 
 /* ===========================
    HEADING
    =========================== */
-#hero-content h1 {
+.hero-content h1 {
   display: flex;
   flex-direction: column;
   text-align: start;
 }
 
-#hero-content h1 span {
+.hero-content h1 span {
   font-weight: 800;
   text-wrap: nowrap;
 
   @media screen and (orientation:landscape) {
-    font-size: var(--text-7xl);
+    font-size: clamp(var(--text-6xl), 10vw, var(--text-7xl));
   }
 
   @media screen and (orientation:portrait) {
@@ -110,18 +106,20 @@ main::before {
 /* ===========================
    PARAGRAPH
    =========================== */
-#hero-content p {
+.hero-content p {
+  min-width: 280px;
   width: 85vw;
   max-width: 550px;
+  line-height: 30px;
   text-align: start;
   color: var(--business-grey);
 
   @media screen and (orientation:portrait) {
-    font-size: var(--text-xl);
+    font-size: var(--text-md);
   }
 
   @media screen and (orientation:landscape) {
-    font-size: var(--text-2xl);
+    font-size: var(--text-lg);
   }
 }
 
@@ -132,9 +130,7 @@ main::before {
   display: flex;
   justify-content: start;
   align-items: center;
-  gap: 2ch;
-  width: 85vw;
-  max-width: 550px;
+  gap: 1rem;
 
   @media screen and (max-width:425px) {
     flex-direction: column;
@@ -143,28 +139,18 @@ main::before {
   }
 }
 
-main a {
-  height: min(7lvh, 50px);
+.hero a {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
   text-wrap: nowrap;
-
-  @media screen and (orientation:portrait) {
-    font-size: var(--text-xl);
-  }
-
-  @media screen and (orientation:landscape) {
-    font-size: var(--text-2xl);
-  }
-
-
+  font-size: var(--text-lg);
 }
 
 .book-btn {
   background-color: var(--business-gold);
-  color: var(--background);
+  color: var(--background-variant1);
 }
 
 .view-btn {
@@ -173,47 +159,41 @@ main a {
   color: var(--business-grey);
 }
 
-.view-btn:hover,
-.view-btn:focus-visible {
-  border-color: var(--business-white);
-  color: var(--business-white);
+.hero a:hover,
+.hero a:focus {
+  transform: scale(1.1);
+  transition: 0.3s;
 }
 
 .divider {
-  border-color: var(--business-grey);
-  opacity: 0.4;
+  border-color: var(--business-dark);
+  min-width: 265px;
   width: 85vw;
   max-width: 550px;
 }
 
 /* ===========================
-   STATS
+   subpoints
    =========================== */
-.stats {
+.subpoints {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-width: 265px;
   width: 85vw;
   max-width: 550px;
 }
 
-.stats li {
+.subpoints li {
   text-wrap: nowrap;
   color: var(--business-grey);
   list-style: none;
+  font-size: var(--text-md);
 
   @media screen and (max-width:525px) {
     display: flex;
     flex-direction: column;
 
-  }
-
-  @media screen and (orientation:portrait) {
-    font-size: var(--text-md);
-  }
-
-  @media screen and (orientation:landscape) {
-    font-size: var(--text-lg);
   }
 }
 
@@ -233,7 +213,6 @@ main a {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    grid-area: portrait;
     justify-self: end;
   }
 
@@ -245,7 +224,7 @@ main a {
 .portrait img {
   width: 25vw;
   margin-bottom: 10px;
-  border: var(--background) 3px solid;
+  border: var(--background-variant1) 3px solid;
 }
 
 .portrait .portrait-name {
@@ -253,7 +232,8 @@ main a {
   display: flex;
   flex-direction: column;
   color: var(--business-white);
-   @media screen and (orientation:portrait) {
+
+  @media screen and (orientation:portrait) {
     font-size: var(--text-xl);
   }
 
@@ -263,12 +243,13 @@ main a {
 }
 
 .portrait .portrait-title {
-   @media screen and (orientation:portrait) {
+  @media screen and (orientation:portrait) {
     font-size: var(--text-lg);
   }
 
   @media screen and (orientation:landscape) {
     font-size: var(--text-xl);
   }
+
   color: var(--business-grey);
 }

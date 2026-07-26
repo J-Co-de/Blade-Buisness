@@ -5,6 +5,7 @@
 */
 @import url("CSS_Components/nav.css");
 @import url("CSS_Components/hero.css");
+@import url("CSS_Components/stats.css");
 
 /* Reset / Normalize (minimal) */
 *,
@@ -45,7 +46,7 @@ a {
   padding: 0.75rem 1rem;
   border-radius: 0.25rem;
   background-color: var(--business-gold);
-  color: var(--background);
+  color: var(--background-variant1);
   font-weight: 700;
   transition: top 0.2s ease;
 }
@@ -64,8 +65,9 @@ a {
   --business-gold: #ffb900;
   --business-white: #f9f9f9;
   --business-grey: #adadaf;
-  --background: #0a0a0c;
-  --bg: #0a0a0c;
+  --business-dark: #4B4B4D;
+  --background-variant1: #0a0a0c;
+  --background-variant2: #0C0D13;
   --text: #f9f9f9;
   --gap: 1rem;
   --muted: #c7c7c7;

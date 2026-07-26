@@ -1,109 +1,94 @@
-/* =========================
+/* ===========================
    NAVIGATION BAR STYLES
-========================= */
+   =========================== */
 nav {
   position: sticky;
-  top: 0;
-  left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  padding: 0.5rem 1rem;
-  background-color: var(--background);
-  border-bottom: 1px solid var(--business-grey);
-  z-index: 5;
+  background-color: var(--background-variant1);
+  border-bottom: 1px solid var(--business-dark);
+  padding: 0.5rem 3vw;
 }
 
-/* =========================
+/* ===========================
    BUSINESS NAME + LOGO
-========================= */
+   =========================== */
 nav .business-name {
   display: flex;
   align-items: center;
-  gap: 0.4ch;
+  gap: 0.4rem;
   width: fit-content;
-  margin: 0;
-  padding: 0;
   font-weight: bold;
-  z-index: 1;
 }
 
-/* =========================
+nav .business-name span {
+  @media screen and (orientation:portrait) {
+    font-size: var(--text-md);
+  }
+
+  @media screen and (orientation:landscape) {
+    font-size: var(--text-xl);
+  }
+
+
+}
+
+/* ===========================
    NAV LINKS
-========================= */
+   =========================== */
 nav .links {
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
-  gap: 1vw;
-  margin: 0;
-  padding: 0;
+  gap: 0.5rem;
   list-style: none;
+
+  & li:hover {
+    transform: scale(0.95);
+    opacity: 0.8;
+    transition: 0.5s;
+
+    & a:not(.btn.primary) {
+      border-bottom: 2px solid var(--business-gold);
+    }
+  }
 }
+
 nav .links a {
   display: flex;
   align-items: center;
   color: var(--business-grey);
   font-weight: 500;
-  font-size: clamp(var(--text-xs), 2lvw, var(--text-5xl));
+  font-size: var(--text-md);
   text-decoration: none;
-  letter-spacing: -0.5px;
+
+
+
+  @media screen and (max-width:750px) {
+    display: none;
+  }
 }
 
-nav .links li {
-  display: flex;
-  align-items: center;
-}
+
+
 
 nav .links .btn.primary {
-  padding: 0.125vw 0.25vw;
+  padding: 0.25rem 0.25rem;
   background: var(--business-gold);
-  color: var(--background);
-  white-space: nowrap;
+  color: var(--background-variant1);
 }
 
-/* =========================
-   RESPONSIVE STYLES
-========================= */
-@media (orientation: landscape) {
-  nav .business-name span {
-    font-size: clamp(var(--text-xs), 2.5vw, var(--text-6xl));
-  }
+.hamburger {
+  display: none;
 
-  nav .links li:hover {
-    transform: scale(0.95);
-    opacity: 0.8;
-    transition: 0.5s;
-    & a:not(.btn.primary) {
-      border-bottom: 2px solid var(--business-gold);
-    }
-  }
-
-  .hamburger {
-    display: none;
-  }
-}
-
-@media (orientation: portrait) {
-  nav .links {
-    display: none;
-  }
-
-  nav .business-name span {
-    font-size: clamp(var(--text-md), 5vw, var(--text-4xl));
-  }
-
-  .hamburger {
+  @media screen and (max-width:750px) {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 5vw;
     background: none;
     border: none;
-  }
-
-  .hamburger svg {
     color: var(--business-grey);
   }
 }
