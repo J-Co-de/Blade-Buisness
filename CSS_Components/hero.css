@@ -5,21 +5,8 @@
   position: relative;
   background-color: rgb(var(--background-variant1));
   isolation: isolate;
-  padding: 4vw 3vw;
-  border-bottom:1px solid rgb(var(--business-dark));
-  display: flex;
 
-  @media screen and (orientation: portrait) {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  @media screen and (orientation: landscape) {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
+  border-bottom: 1px solid rgb(var(--business-dark));
 }
 
 .hero::before {
@@ -36,6 +23,26 @@
   background-size: cover;
   background-image: url("../Images/hero.jpg");
 
+}
+
+.hero-container {
+  display: flex;
+  width: 100%;
+  max-width: 1400px;
+  justify-self: center;
+  padding: 4vw 3vw;
+
+  @media screen and (orientation: portrait) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media screen and (orientation: landscape) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 /* ===========================
@@ -190,13 +197,13 @@
 }
 
 .portrait img {
-  width: 25vw;
+  width: 25rem;
   margin-bottom: 10px;
   border: rgb(var(--background-variant1)) 3px solid;
 }
 
 .portrait .portrait-name {
-  width: 25vw;
+  width: 25rem;
   display: flex;
   flex-direction: column;
   color: rgb(var(--business-white));

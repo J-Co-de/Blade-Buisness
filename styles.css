@@ -192,6 +192,6 @@ section header {
   gap: 1rem;
 }
 
-section:nth-of-type(n+2):nth-of-type(-n+9) {
-  padding: 2vw 3vw;
+section:nth-of-type(n+2):nth-of-type(-n+9) > :first-child {
+  padding: 3vw 3vw;
 }

@@ -3,12 +3,20 @@
    =========================== */
 nav {
   position: sticky;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-color: rgb(var(--background-variant1));
   border-bottom: 1px solid rgb(var(--business-dark));
-  padding: 0.5rem 3vw;
+
+}
+
+.nav-content {
+  display: flex;
+  min-height: 4.5rem;
+  padding: 2vw 3vw;
+  justify-content: space-between;
+  align-items: center;
+  justify-self: center;
+  width: 100%;
+  max-width: 1400px
 }
 
 /* ===========================
@@ -18,7 +26,8 @@ nav .business-name {
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  width: fit-content;
+  margin: 0;
+  min-height: 100%;
   font-weight: bold;
 }
 

@@ -1,11 +1,19 @@
 .services {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+
     background-color: rgb(var(--background-variant2));
 }
 
 .services-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    max-width: 1400px;
+    width: 100%;
+}
+
+.service-cards {
     @media screen and (orientation:portrait) {
         display: flex;
         flex-direction: column;
@@ -32,6 +40,12 @@
     max-width: 700px;
     padding: 1rem;
     border: 0.5px solid rgb(var(--business-dark));
+
+}
+
+.card:hover {
+    transition: 0.5s;
+    filter: brightness(2);
 }
 
 
