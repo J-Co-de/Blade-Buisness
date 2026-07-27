@@ -47,39 +47,7 @@
   gap: 1.5rem;
 }
 
-/* ===========================
-   TAGLINE
-   =========================== */
-.tagline {
-  display: flex;
-  align-items: center;
-  color: var(--business-gold);
-  font-size: var(--text-md);
 
-  @media screen and (orientation:portrait) {
-    gap: 0.5rem;
-  }
-
-  @media screen and (orientation:landscape) {
-
-    gap: 1rem;
-  }
-}
-
-.tagline .dash {
-  height: 0.1rem;
-  background-color: var(--business-gold);
-
-  @media screen and (orientation:portrait) {
-    width: 20px;
-  }
-
-  @media screen and (orientation:landscape) {
-    width: 30px;
-  }
-
-
-}
 
 /* ===========================
    HEADING

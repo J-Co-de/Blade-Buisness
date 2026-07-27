@@ -1,0 +1,54 @@
+.services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--background-variant2);
+}
+
+.services-container {
+    display: grid;
+    grid-template-areas:
+        "restoration customization"
+        "sharpening handle";
+}
+
+.card {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    max-width:700px;
+    padding: 1rem;
+}
+
+.restoration.card {
+    border-bottom: 0.5px solid var(--business-dark);
+    border-right: 0.5px solid var(--business-dark);
+}
+
+.customization.card {
+    border-bottom: 0.5px solid var(--business-dark);
+    border-left: 0.5px solid var(--business-dark);
+}
+
+.sharpening.card {
+    border-top: 0.5px solid var(--business-dark);
+    border-right: 0.5px solid var(--business-dark);
+}
+
+.handle.card {
+    border-top: 0.5px solid var(--business-dark);
+    border-left: 0.5px solid var(--business-dark);
+}
+
+.card svg {
+    color: var(--business-white)
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price {
+    color: var(--business-gold);
+}

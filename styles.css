@@ -6,6 +6,7 @@
 @import url("CSS_Components/nav.css");
 @import url("CSS_Components/hero.css");
 @import url("CSS_Components/stats.css");
+@import url("CSS_Components/services.css");
 
 /* Reset / Normalize (minimal) */
 *,
@@ -123,6 +124,11 @@ h6,
 .stat-number {
   font-family: var(--font-header);
   font-weight: var(--font-header-weight);
+  color: var(--business-white);
+}
+
+h2 {
+  font-size: var(--text-5xl);
 }
 
 nav a,
@@ -132,4 +138,48 @@ textarea,
 select {
   font-family: var(--font-body);
   font-weight: var(--font-body-medium);
+}
+
+/* ===========================
+   TAGLINE
+   =========================== */
+.tagline {
+  display: flex;
+  align-items: center;
+  color: var(--business-gold);
+  font-size: var(--text-md);
+
+  @media screen and (orientation:portrait) {
+    gap: 0.5rem;
+  }
+
+  @media screen and (orientation:landscape) {
+
+    gap: 1rem;
+  }
+}
+
+.tagline .dash {
+  height: 0.1rem;
+  background-color: var(--business-gold);
+
+  @media screen and (orientation:portrait) {
+    width: 20px;
+  }
+
+  @media screen and (orientation:landscape) {
+    width: 30px;
+  }
+}
+
+section header {
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+section:nth-of-type(n+2):nth-of-type(-n+9) {
+  padding: 2vw 3vw;
 }

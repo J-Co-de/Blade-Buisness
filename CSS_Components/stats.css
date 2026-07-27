@@ -2,10 +2,8 @@
     display: flex;
     justify-content: space-evenly;
     background-color: var(--background-variant1);
-    height:fit-content;
-    border-bottom:1px solid var(--business-dark);
-    @media screen and (orientation:portrait) {padding: 0.5rem;}
-    @media screen and (orientation:landscape) {padding: 2rem;}
+    border-bottom: 1px solid var(--business-dark);
+    padding: 1vw 3vw;
 }
 
 .stats span {
