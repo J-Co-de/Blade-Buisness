@@ -3,10 +3,10 @@
    =========================== */
 .hero {
   position: relative;
-  background-color: var(--background-variant1);
+  background-color: rgb(var(--background-variant1));
   isolation: isolate;
   padding: 4vw 3vw;
-  border-bottom:1px solid var(--business-dark);
+  border-bottom:1px solid rgb(var(--business-dark));
   display: flex;
 
   @media screen and (orientation: portrait) {
@@ -80,7 +80,7 @@
   max-width: 550px;
   line-height: 30px;
   text-align: start;
-  color: var(--business-grey);
+  color: rgb(var(--business-grey));
 
   @media screen and (orientation:portrait) {
     font-size: var(--text-md);
@@ -117,14 +117,14 @@
 }
 
 .book-btn {
-  background-color: var(--business-gold);
-  color: var(--background-variant1);
+  background-color: rgb(var(--business-gold));
+  color: rgb(var(--background-variant1));
 }
 
 .view-btn {
   background-color: transparent;
-  border: var(--business-grey) 1px solid;
-  color: var(--business-grey);
+  border: rgb(var(--business-grey)) 1px solid;
+  color: rgb(var(--business-grey));
 }
 
 .hero a:hover,
@@ -134,7 +134,7 @@
 }
 
 .divider {
-  border-color: var(--business-dark);
+  border-color: rgb(var(--business-dark));
   min-width: 265px;
   width: 85vw;
   max-width: 550px;
@@ -154,7 +154,7 @@
 
 .subpoints li {
   text-wrap: nowrap;
-  color: var(--business-grey);
+  color: rgb(var(--business-grey));
   list-style: none;
   font-size: var(--text-md);
 
@@ -168,7 +168,7 @@
 .yellow-diamond {
   width: 1ch;
   height: 1ch;
-  background-color: var(--business-gold);
+  background-color: rgb(var(--business-gold));
   transform: rotate(45deg);
 }
 
@@ -192,14 +192,14 @@
 .portrait img {
   width: 25vw;
   margin-bottom: 10px;
-  border: var(--background-variant1) 3px solid;
+  border: rgb(var(--background-variant1)) 3px solid;
 }
 
 .portrait .portrait-name {
   width: 25vw;
   display: flex;
   flex-direction: column;
-  color: var(--business-white);
+  color: rgb(var(--business-white));
 
   @media screen and (orientation:portrait) {
     font-size: var(--text-xl);
@@ -219,5 +219,5 @@
     font-size: var(--text-xl);
   }
 
-  color: var(--business-grey);
+  color: rgb(var(--business-grey));
 }

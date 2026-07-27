@@ -6,8 +6,8 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--background-variant1);
-  border-bottom: 1px solid var(--business-dark);
+  background-color: rgb(var(--background-variant1));
+  border-bottom: 1px solid rgb(var(--business-dark));
   padding: 0.5rem 3vw;
 }
 
@@ -50,7 +50,7 @@ nav .links {
     transition: 0.5s;
 
     & a:not(.btn.primary) {
-      border-bottom: 2px solid var(--business-gold);
+      border-bottom: 2px solid rgb(var(--business-gold));
     }
   }
 }
@@ -58,7 +58,7 @@ nav .links {
 nav .links a {
   display: flex;
   align-items: center;
-  color: var(--business-grey);
+  color: rgb(var(--business-grey));
   font-weight: 500;
   font-size: var(--text-md);
   text-decoration: none;
@@ -75,8 +75,8 @@ nav .links a {
 
 nav .links .btn.primary {
   padding: 0.25rem 0.25rem;
-  background: var(--business-gold);
-  color: var(--background-variant1);
+  background: rgb(var(--business-gold));
+  color: rgb(var(--background-variant1));
 }
 
 .hamburger {
@@ -89,6 +89,6 @@ nav .links .btn.primary {
     width: 5vw;
     background: none;
     border: none;
-    color: var(--business-grey);
+    color: rgb(var(--business-grey));
   }
 }

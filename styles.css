@@ -46,8 +46,8 @@ a {
   z-index: 20;
   padding: 0.75rem 1rem;
   border-radius: 0.25rem;
-  background-color: var(--business-gold);
-  color: var(--background-variant1);
+  background-color: rgb(var(--business-gold));
+  color: rgb(var(--background-variant1));
   font-weight: 700;
   transition: top 0.2s ease;
 }
@@ -57,21 +57,22 @@ a {
 }
 
 :focus-visible {
-  outline: 3px solid var(--business-gold);
+  outline: 3px solid rgb(var(--business-gold));
   outline-offset: 3px;
 }
 
 /* Variables */
 :root {
-  --business-gold: #ffb900;
-  --business-white: #f9f9f9;
-  --business-grey: #adadaf;
-  --business-dark: #4B4B4D;
-  --background-variant1: #0a0a0c;
-  --background-variant2: #0C0D13;
-  --text: #f9f9f9;
+  --business-gold: 255, 185, 0;
+  --business-white: 249, 249, 249;
+  --business-grey: 173, 173, 175;
+  --business-dark: 75, 75, 77;
+  --background-variant1: 10, 10, 12;
+  --background-variant2: 12, 13, 19;
+  --text: 249, 249, 249;
   --gap: 1rem;
-  --muted: #c7c7c7;
+  --muted: 199, 199, 199;
+
 
   --font-header: "Roboto Slab", serif;
   --font-header-weight: 700;
@@ -106,11 +107,11 @@ a {
 }
 
 .business-name-gold {
-  color: var(--business-gold);
+  color: rgb(var(--business-gold));
 }
 
 .business-name-white {
-  color: var(--business-white);
+  color: rgb(var(--business-white));
 }
 
 h1,
@@ -124,11 +125,22 @@ h6,
 .stat-number {
   font-family: var(--font-header);
   font-weight: var(--font-header-weight);
-  color: var(--business-white);
+  color: rgb(var(--business-white));
 }
 
 h2 {
   font-size: var(--text-5xl);
+  margin-bottom: 2rem;
+}
+
+h3 {
+  @media screen and (orientation:portrait) {
+    font-size: var(--text-xl);
+  }
+
+  @media screen and (orientation:landscape) {
+    font-size: var(--text-2xl);
+  }
 }
 
 nav a,
@@ -146,7 +158,7 @@ select {
 .tagline {
   display: flex;
   align-items: center;
-  color: var(--business-gold);
+  color: rgb(var(--business-gold));
   font-size: var(--text-md);
 
   @media screen and (orientation:portrait) {
@@ -161,7 +173,7 @@ select {
 
 .tagline .dash {
   height: 0.1rem;
-  background-color: var(--business-gold);
+  background-color: rgb(var(--business-gold));
 
   @media screen and (orientation:portrait) {
     width: 20px;
