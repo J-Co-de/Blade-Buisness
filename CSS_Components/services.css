@@ -31,8 +31,7 @@
 
 }
 
-.card {
-    list-style: none;
+.service-cards .card {
     background-color: rgb(var(--background-variant1));
     display: flex;
     flex-direction: column;
@@ -87,7 +86,7 @@
 .services footer {
     background-color: rgb(var(--business-dark), 0.3);
     border: 0.5px solid rgb(var(--business-dark), 0.5);
-    margin-top: 0.75rem;
+    margin-top: 1.5rem;
     padding: 0.75rem;
     color: rgb(var(--business-grey));
 

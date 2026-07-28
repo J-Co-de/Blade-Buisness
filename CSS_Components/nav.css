@@ -2,7 +2,7 @@
    NAVIGATION BAR STYLES
    =========================== */
 nav {
-  position: sticky;
+
   background-color: rgb(var(--background-variant1));
   border-bottom: 1px solid rgb(var(--business-dark));
 
@@ -10,8 +10,8 @@ nav {
 
 .nav-content {
   display: flex;
-  min-height: 4.5rem;
-  padding: 2vw 3vw;
+  min-height: 3rem;
+  padding: 1vw 3vw;
   justify-content: space-between;
   align-items: center;
   justify-self: center;
@@ -51,7 +51,6 @@ nav .links {
   align-items: center;
   flex-wrap: nowrap;
   gap: 0.5rem;
-  list-style: none;
 
   & li:hover {
     transform: scale(0.95);
