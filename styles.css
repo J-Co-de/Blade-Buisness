@@ -10,6 +10,9 @@
 @import url("CSS_Components/process.css");
 @import url("CSS_Components/gallery.css");
 @import url("CSS_Components/testimonial.css");
+@import url("CSS_Components/contact.css");
+@import url("CSS_Components/footer.css");
+
 /* Reset / Normalize (minimal) */
 *,
 *::before,
@@ -205,4 +208,23 @@ body>header:first-of-type {
 
 main {
   z-index: 1;
+}
+
+.business-name {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0;
+  min-height: 100%;
+  font-weight: bold;
+}
+
+.business-name span {
+  @media screen and (orientation:portrait) {
+    font-size: var(--text-md);
+  }
+
+  @media screen and (orientation:landscape) {
+    font-size: var(--text-xl);
+  }
 }

@@ -1,0 +1,126 @@
+.contact {
+    background-color: rgb(var(--background-variant2));
+}
+
+.contact-container {
+    width: 100%;
+    max-width: 1400px;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+
+    @media screen and (orientation:portrait) {
+        flex-direction: column;
+    }
+}
+
+.contact-content p {
+    color: rgb(var(--business-grey));
+
+
+    @media screen and (orientation:portrait) {
+        font-size: var(--text-md);
+    }
+
+    @media screen and (orientation:landscape) {
+        font-size: var(--text-lg);
+    }
+}
+
+.contact-info {
+    width: 100%;
+    padding-top: 1.5rem;
+}
+
+
+.contact-info li {
+    padding: 2rem 0;
+    border-bottom: 1px solid rgb(var(--business-dark));
+    color: rgb(var(--business-white));
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+    font-size: var(--text-md);
+}
+
+
+
+.contact-info li h3 {
+    color: rgba(var(--business-grey), 0.9);
+    font-size: var(--text-lg);
+    width: 2rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.contact-form input {
+    height: 1.5rem;
+}
+
+.contact-form textarea {
+    height: 11rem;
+    resize: none;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background-color: rgba(var(--business-dark), 0.4);
+    border: 1px solid rgba(var(--business-grey), 0.4);
+    color: rgb(var(--business-white));
+    font-size: var(--text-md);
+    padding: 0.2rem;
+}
+
+.contact-form label {
+    font-size: var(--text-lg);
+    color: rgb(var(--business-grey), 0.8);
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+
+}
+
+.contact-form .buttons {
+    display: flex;
+    margin-top: 0.75rem;
+    gap: 0.75rem;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: var(--text-lg);
+    border: none;
+
+}
+
+.contact-form button:hover,
+.contact-form button:focus {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.contact-form button:active {
+    transition: 0.3s;
+    filter: brightness(1.5);
+}
+
+.contact-form button[type="submit"] {
+    background-color: rgb(var(--business-gold));
+    color: rgb(var(--background-variant2));
+}
+
+.contact-form button[type="reset"] {
+    background-color: rgb(137, 42, 42);
+    color: rgb(var(--business-white));
+}

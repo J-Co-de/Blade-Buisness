@@ -140,6 +140,11 @@
   transition: 0.3s;
 }
 
+.hero a:active {
+  transition: 0.3s;
+  filter: brightness(1.5);
+}
+
 .divider {
   border-color: rgb(var(--business-dark));
   min-width: 265px;
