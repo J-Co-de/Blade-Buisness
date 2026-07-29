@@ -13,7 +13,7 @@
 .images {
     display: flex;
     gap: 1rem;
-
+    align-items:center;
     @media screen and (orientation: portrait) {
         flex-direction: column;
     }

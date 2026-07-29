@@ -41,5 +41,5 @@
 .process-cards .card span {
     font-size: var(--text-5xl);
     font-weight: 700;
-    color: rgba(var(--business-grey), 0.5);
+    color: rgba(var(--business-grey), 0.9);
 }
