@@ -8,80 +8,61 @@
   </head>
   <body>
     <header>
-      <nav aria-label="Primary-Nav">
+      <nav aria-label="navigation">
         <div class="nav-content">
-          <a class="skip-link" href="#main-content">Skip to main content</a>
-          <h2 class="business-name">
-            <span class="business-name-white">PATINA</span>
-            <span class="business-name-gold">BLADE RESTORATIONS</span>
-          </h2>
-          <ul class="links" aria-label="Main navbar">
+          <div class="non-link-elements">
+            <a class="skip-link" href="#contact">Skip to Contact</a>
+            <h2 class="business-name">
+              <span class="business-name-white">PATINA</span>
+              <span class="business-name-gold">BLADE RESTORATIONS</span>
+            </h2>
+            <button
+              class="hamburger"
+              type="button"
+              aria-expanded="false"
+              aria-controls="site-navigation"
+              aria-label="Dropdown button"
+            >
+              <svg
+                aria-hidden="true"
+                class="hamburger-open"
+                xmlns="https://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M4 5h16" />
+                <path d="M4 12h16" />
+                <path d="M4 19h16" />
+              </svg>
+              <svg
+                class="hamburger-exit"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-x-icon lucide-x"
+
+              >
+                <path d="M18 6 6 18" />
+                <path d="m6 6 12 12" />
+              </svg>
+            </button>
+          </div>
+          <hr />
+          <ul class="links" aria-label="navigation links">
             <li><a href="#services">Services</a></li>
             <li><a href="#process">Process</a></li>
             <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a class="btn primary" href="#quote">Get a Quote</a></li>
+            <li><a href="#testimonial">Testimonials</a></li>
+            <li><a class="btn primary" href="#contact">Get a Quote</a></li>
           </ul>
-          <button
-            class="hamburger"
-            type="button"
-            aria-expanded="false"
-            aria-controls="site-navigation"
-            aria-label="Open menu"
-          >
-            <svg
-              aria-hidden="true"
-              xmlns="https://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M4 5h16" />
-              <path d="M4 12h16" />
-              <path d="M4 19h16" />
-            </svg>
-          </button>
-        </div>
-      </nav>
-      <nav aria-label="Hamburger-Nav">
-        <div class="nav-content">
-          <a class="skip-link" href="#main-content">Skip to main content</a>
-          <h2 class="business-name">
-            <span class="business-name-white">PATINA</span>
-            <span class="business-name-gold">BLADE RESTORATIONS</span>
-          </h2>
-          <ul class="links" aria-label="Main navbar">
-            <li><a href="#services">Services</a></li>
-            <li><a href="#process">Process</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a class="btn primary" href="#quote">Get a Quote</a></li>
-          </ul>
-          <button
-            class="hamburger"
-            type="button"
-            aria-expanded="false"
-            aria-controls="site-navigation"
-            aria-label="Open menu"
-          >
-            <svg
-              aria-hidden="true"
-              xmlns="https://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M4 5h16" />
-              <path d="M4 12h16" />
-              <path d="M4 19h16" />
-            </svg>
-          </button>
         </div>
       </nav>
     </header>
@@ -103,7 +84,7 @@
               steel’s history while preparing it for years of reliable use.
             </p>
             <div class="buttons">
-              <a href="#quote" class="book-btn">Book Services</a>
+              <a href="#connect" class="book-btn">Book Services</a>
               <a href="#services" class="view-btn">View Services</a>
             </div>
             <hr class="divider" aria-hidden="true" />
@@ -137,10 +118,12 @@
           <span><strong class="value">14+</strong> Years in Operation</span
           ><span><strong class="value">40K+</strong> Blades Restored</span
           ><span><strong class="value">3-7</strong> Day Turnaround</span
-          ><span><strong class="value">100%</strong> Satisfaction Guarentee</span>
+          ><span
+            ><strong class="value">100%</strong> Satisfaction Guarantee</span
+          >
         </div>
       </section>
-      <section class="services">
+      <section id="services" class="services">
         <div class="services-container">
           <header>
             <div class="tagline">
@@ -268,13 +251,13 @@
             </li>
           </ul>
           <footer>
-            <strong>Commercial & volume pricing available</strong>. Restaurants,
+            <strong>Commercial & volume pricing available.</strong> Restaurants,
             butchers, woodworking shops, and professional kitchens. Contact us
             for a standing arrangement.
           </footer>
         </div>
       </section>
-      <section class="process">
+      <section id="process" class="process">
         <div class="process-container">
           <header>
             <div class="tagline">
@@ -331,7 +314,7 @@
           </ul>
         </div>
       </section>
-      <section class="gallery">
+      <section id="gallery" class="gallery">
         <div class="gallery-container">
           <header>
             <div class="tagline">
@@ -351,7 +334,7 @@
           </div>
         </div>
       </section>
-      <section class="testimonial">
+      <section id="testimonial" class="testimonial">
         <div class="testimonial-container">
           <header>
             <div class="tagline">
@@ -424,7 +407,7 @@
           </ul>
         </div>
       </section>
-      <section class="contact">
+      <section id="contact" class="contact">
         <div class="contact-container">
           <header>
             <div class="tagline">
