@@ -34,7 +34,6 @@ nav {
    NAV LINKS
    =========================== */
 nav hr {
-  display: none;
 
   @media screen and (orientation:portrait) {
     width: 100%;
@@ -59,7 +58,6 @@ nav .links {
     gap: 0.5rem;
     flex-direction: column;
     align-self: start;
-    display: none;
   }
 
   & li:hover {
@@ -98,7 +96,6 @@ nav .links .btn.primary {
 }
 
 .hamburger {
-  display: none;
 
   @media screen and (orientation:portrait) {
     display: flex;
@@ -112,9 +109,7 @@ nav .links .btn.primary {
 }
 
 .hamburger-open {
-  display: none
 }
 
 .hamburger-exit {
-  display: none;
 }
