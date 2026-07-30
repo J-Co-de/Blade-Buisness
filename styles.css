@@ -223,9 +223,17 @@ main {
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  margin: 0;
+
   min-height: 100%;
   font-weight: bold;
+
+  @media screen and (orientation:portrait) {
+    margin: 2.5vw 0;
+  }
+
+  @media screen and (orientation:landscape) {
+    margin: 0;
+  }
 }
 
 .business-name span {
@@ -234,6 +242,12 @@ main {
   }
 
   @media screen and (orientation:landscape) {
-    font-size: var(--text-xl);
+    @media screen and (min-height:401px) {
+      font-size: var(--text-xl);
+    }
+
+    @media screen and (max-height:400px) {
+      font-size: var(--text-md);
+    }
   }
 }

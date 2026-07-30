@@ -12,11 +12,20 @@ nav {
   display: flex;
   min-height: 3rem;
   padding: 1vw 3vw;
+
   justify-content: space-between;
   align-items: center;
   justify-self: center;
   width: 100%;
   max-width: 1400px;
+
+  @media screen and (min-height:401px) {
+    padding: 1vw 3vw;
+  }
+
+  @media screen and (max-height:400px) {
+    padding: 1vw 2vw;
+  }
 }
 
 .nav-col {
@@ -52,7 +61,15 @@ nav .links {
 
   @media screen and (orientation:landscape) {
     align-items: center;
-    gap: clamp(0.2rem, 0.6vw, 0.5rem);
+
+
+    @media screen and (min-height:401px) {
+      gap: clamp(0.2rem, 0.6vw, 0.5rem);
+    }
+
+    @media screen and (max-height:400px) {
+      gap: clamp(0.2rem, 1vw, 0.6rem);
+    }
   }
 
   @media screen and (orientation:portrait) {

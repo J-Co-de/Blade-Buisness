@@ -11,7 +11,7 @@
       <nav aria-label="navigation">
         <div class="nav-content">
           <div class="non-link-elements">
-            <a class="skip-link" href="#contact">Skip to Contact</a>
+            <a class="skip-link" href="#main-content">Skip to Main Content</a>
             <h2 class="business-name">
               <span class="business-name-white">PATINA</span>
               <span class="business-name-gold">BLADE RESTORATIONS</span>
@@ -21,7 +21,7 @@
               type="button"
               aria-expanded="false"
               aria-controls="site-navigation"
-              aria-label="Dropdown button"
+              aria-label="Toggle navigation menu"
             >
               <svg
                 aria-hidden="true"
@@ -39,6 +39,7 @@
                 <path d="M4 19h16" />
               </svg>
               <svg
+                aria-hidden="true"
                 class="hamburger-exit"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -64,7 +65,7 @@
         </div>
       </nav>
     </header>
-    <main>
+    <main id="main-content">
       <section class="hero">
         <div class="hero-container">
           <div class="hero-content">
@@ -133,6 +134,7 @@
           <ul class="service-cards">
             <li class="restoration card">
               <svg
+                aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -161,6 +163,7 @@
             </li>
             <li class="customization card">
               <svg
+                aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -191,6 +194,7 @@
             </li>
             <li class="sharpening card">
               <svg
+                aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -222,6 +226,7 @@
             </li>
             <li class="handle card">
               <svg
+                aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -322,12 +327,12 @@
             <h2>Gallery</h2>
           </header>
           <div class="images">
-            <img class="large-image" />
+            <img alt="" class="large-image" />
             <div class="small-images">
-              <img class="small-image" />
-              <img class="small-image" />
-              <img class="small-image" />
-              <img class="small-image" />
+              <img alt="" class="small-image" />
+              <img alt="" class="small-image" />
+              <img alt="" class="small-image" />
+              <img alt="" class="small-image" />
             </div>
           </div>
         </div>
@@ -353,7 +358,7 @@
                 <cite>
                   <span class="name">
                     <div class="initials">UK</div>
-                    <h3>Your Name</h3>
+                    <span class="full-name">Your Name</span>
                   </span>
                   <span class="role">
                     |Tell us what you do with the blade|
@@ -373,7 +378,7 @@
                 <cite>
                   <span class="name">
                     <div class="initials">UK</div>
-                    <h3>Your Name</h3>
+                    <span class="full-name">Your Name</span>
                   </span>
                   <span class="role"
                     >|Tell us what you do with the blade|</span
@@ -393,7 +398,7 @@
                 <cite>
                   <span class="name">
                     <div class="initials">UK</div>
-                    <h3>Your Name</h3>
+                    <span class="full-name">Your Name</span>
                   </span>
 
                   <span class="role"
@@ -419,7 +424,7 @@
               <p>
                 Questions about a specific blade, want to arrange a drop-off, or
                 need volume pricing for your business? Fill out the form or
-                reach us directly below.
+                reach us with the information directly below.
               </p>
               <ul>
                 <li>
@@ -443,15 +448,12 @@
             </div>
 
             <form class="contact-form">
-              <label id="name-label">Your Name</label>
-              <input type="text" name="name" aria-labelledby="name-label" />
-              <label id="email-label">Email Address</label>
-              <input type="email" name="email" aria-labelledby="email-label" />
-              <label id="message-label">Message</label>
-              <textarea
-                name="message"
-                aria-labelledby="message-label"
-              ></textarea>
+              <label for="name-input">Your Name</label>
+              <input type="text" id="name-input" name="name" />
+              <label for="email-input">Email Address</label>
+              <input type="email" id="email-input" name="email" />
+              <label for="message-textarea">Message</label>
+              <textarea id="message-textarea" name="message"></textarea>
               <div class="buttons">
                 <button type="submit">Submit Message</button>
                 <button type="reset">Reset Message</button>
@@ -476,8 +478,9 @@
 
           <ul class="media-links">
             <li>
-              <a>
+              <a aria-label="Visit our Facebook page">
                 <svg
+                  aria-hidden="true"
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
@@ -491,8 +494,9 @@
               </a>
             </li>
             <li>
-              <a>
+              <a aria-label="Visit our Instagram page">
                 <svg
+                  aria-hidden="true"
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
@@ -506,8 +510,9 @@
               </a>
             </li>
             <li>
-              <a>
+              <a aria-label="Visit our X page">
                 <svg
+                  aria-hidden="true"
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"

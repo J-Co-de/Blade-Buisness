@@ -67,11 +67,13 @@
     width: fit-content;
     border-radius: 100%;
     padding: 0.3rem;
+
 }
 
 
-.testimonial-cards blockquote h3 {
+.testimonial-cards blockquote .full-name {
     font-weight: 400;
+    font-size: var(--text-2xl);
 }
 
 
