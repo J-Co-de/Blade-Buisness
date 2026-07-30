@@ -1,6 +1,7 @@
 .stats {
     background-color: rgb(var(--background-variant1));
     border-bottom: 1px solid rgb(var(--business-dark));
+    display: flex;
 }
 
 .stats-container {

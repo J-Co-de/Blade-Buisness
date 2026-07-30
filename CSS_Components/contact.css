@@ -1,5 +1,6 @@
 .contact {
     background-color: rgb(var(--background-variant2));
+    display: flex;
 }
 
 .contact-container {

@@ -1,5 +1,6 @@
 .gallery {
     background-color: rgb(var(--background-variant2));
+    display: flex;
 }
 
 .gallery-container {
