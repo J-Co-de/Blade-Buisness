@@ -3,6 +3,7 @@
 	 - CSS Variables (theme)
 	 - Typography, layout, utility classes
 */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Protest+Guerrilla&family=Quattrocento:wght@400;700&display=swap');
 @import url("CSS_Components/nav.css");
 @import url("CSS_Components/hero.css");
 @import url("CSS_Components/stats.css");
@@ -83,12 +84,13 @@ a {
   --muted: 199, 199, 199;
 
 
-  --font-header: "Roboto Slab", serif;
+  --font-header: "Cinzel Decorative", serif;
   --font-header-weight: 700;
 
-  --font-body: "Roboto", sans-serif;
+  --font-body: "Cinzel", serif;
   --font-body-weight: 400;
   --font-body-medium: 500;
+
 
   /* Typography Scale */
   --text-xs: 0.75rem;
@@ -152,11 +154,13 @@ h3 {
   }
 }
 
-nav a,
+a,
 label,
 input,
 textarea,
-select {
+select,
+p,
+span {
   font-family: var(--font-body);
   font-weight: var(--font-body-medium);
 }
