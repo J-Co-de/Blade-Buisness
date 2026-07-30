@@ -1,5 +1,5 @@
 .process {
-
+    display: grid;
     background-color: rgb(var(--background-variant1));
     border-top: 1px solid rgb(var(--business-grey));
     border-bottom: 1px solid rgb(var(--business-grey));

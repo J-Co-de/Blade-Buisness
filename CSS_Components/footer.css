@@ -2,7 +2,8 @@ footer {
     background-color: rgb(var(--background-variant1));
     border-bottom: 1px solid rgb(var(--business-dark));
     border-top: 1px solid rgb(var(--business-dark));
-    display: flex;
+    display: grid;
+    
 }
 
 .footer-content {
