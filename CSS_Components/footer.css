@@ -61,7 +61,7 @@ footer {
 
 .bottom-left {
     grid-area: bottom-left;
-    color: rgba(var(--business-grey), 0.6)
+    color: rgba(var(--business-grey), 0.7)
 }
 
 .bottom-right {
