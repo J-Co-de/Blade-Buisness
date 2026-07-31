@@ -45,24 +45,36 @@
 
     & li {
         padding: 2rem 0;
-        border-bottom: 1px solid rgb(var(--business-dark));
+
         color: rgb(var(--business-white));
         display: flex;
         gap: 5rem;
         align-items: center;
         font-size: var(--text-md);
+
+        @media screen and (max-width:900px) {
+            border-bottom: 1px solid rgb(var(--business-dark));
+        }
+
+
     }
 
-    & li h3 {
-        color: rgba(var(--business-grey), 0.9);
-        font-size: var(--text-lg);
-        width: 2rem;
+    @media screen and (min-width:901px) {
+        & li:nth-of-type(n+1):nth-of-type(-n+3) {
+            border-bottom: 1px solid rgb(var(--business-dark));
+        }
     }
+}
 
-    & .email {
-        overflow-wrap: anywhere;
-        word-break: break-word;
-    }
+& li h3 {
+    color: rgba(var(--business-grey), 0.9);
+    font-size: var(--text-lg);
+    width: 2rem;
+}
+
+& .email {
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 .contact-form {

@@ -48,7 +48,6 @@ nav {
 .nav-content hr {
   @media screen and (max-width: 900px) {
     width: 100%;
-    border-color: rgb(var(--background-variant1));
     margin: 1vw 0;
   }
 }
