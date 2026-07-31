@@ -67,8 +67,8 @@ a {
 }
 
 :focus-visible {
-  outline: 3px solid rgb(var(--business-gold));
-  outline-offset: 3px;
+  outline: 1px solid rgb(var(--business-gold));
+  outline-offset: 2px;
 }
 
 /* Variables */
