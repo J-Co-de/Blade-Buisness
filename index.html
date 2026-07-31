@@ -12,10 +12,12 @@
         <div class="nav-content">
           <div class="non-link-elements">
             <a class="skip-link" href="#main-content">Skip to Main Content</a>
-            <h2 class="business-name">
-              <span class="business-name-white">PATINA</span>
-              <span class="business-name-gold">BLADE RESTORATIONS</span>
-            </h2>
+            <a href="#">
+              <h2 class="nav business-name">
+                <span class="business-name-white">PATINA</span>
+                <span class="business-name-gold">BLADE RESTORATIONS</span>
+              </h2>
+            </a>
             <button
               class="hamburger"
               type="button"
@@ -48,19 +50,22 @@
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
+                hidden
               >
                 <path d="M18 6 6 18" />
                 <path d="m6 6 12 12" />
               </svg>
             </button>
           </div>
-          <hr />
-          <ul class="links" aria-label="navigation links">
+          <hr hidden />
+          <ul hidden class="links" aria-label="navigation links">
             <li><a href="#services">Services</a></li>
             <li><a href="#process">Process</a></li>
             <li><a href="#gallery">Gallery</a></li>
             <li><a href="#testimonial">Testimonials</a></li>
-            <li><a class="btn primary" href="#contact">Get a Quote</a></li>
+            <li>
+              <a class="btn primary" href="#contact">Get a Quote</a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -114,12 +119,12 @@
       </section>
       <section class="stats">
         <div class="stats-container">
-          <span><strong class="value">14+</strong> Years in Operation</span
-          ><span><strong class="value">40K+</strong> Blades Restored</span
-          ><span><strong class="value">3-7</strong> Day Turnaround</span
-          ><span
-            ><strong class="value">100%</strong> Satisfaction Guarantee</span
-          >
+          <span><strong class="value">14+</strong> Years in Operation</span>
+          <span><strong class="value">40K+</strong> Blades Restored</span>
+          <span><strong class="value">3-7</strong> Day Turn around</span>
+          <span>
+            <strong class="value">100%</strong> Satisfaction Guarantee
+          </span>
         </div>
       </section>
       <section id="services" class="services">
@@ -254,9 +259,9 @@
             </li>
           </ul>
           <footer>
-            <strong>Commercial & volume pricing available.</strong> Restaurants,
-            butchers, woodworking shops, and professional kitchens. Contact us
-            for a standing arrangement.
+            <h3>Commercial & volume pricing available.</h3>
+            Restaurants, butchers, woodworking shops, and professional kitchens.
+            Contact us for a standing arrangement.
           </footer>
         </div>
       </section>
@@ -442,7 +447,7 @@
                 </li>
                 <li>
                   <h3>EMAIL</h3>
-                  hello@edgecraftblades.com
+                  <span class="email">hello@edgecraftblades.com</span>
                 </li>
               </ul>
             </div>

@@ -1,46 +1,67 @@
+/* ===========================
+   STATS SECTION
+   =========================== */
 .stats {
     background-color: rgb(var(--background-variant1));
     border-bottom: 1px solid rgb(var(--business-dark));
     display: grid;
-    
 }
 
+/* ===========================
+   STATS CONTAINER
+   =========================== */
 .stats-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     justify-self: center;
     max-width: 1400px;
     width: 100%;
     padding: 1vw 3vw;
-}
 
-.stats span {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3px;
-    color: rgb(var(--business-grey));
-    font-size: var(--text-xl);
-    text-align: center;
-
-    @media screen and (orientation:portrait) {
-        font-size: var(--text-sm);
-
+    @media screen and (max-width:400px) {
+        display: grid;
+        grid-template-areas:
+            "stat1 stat2"
+            "stat3 stat4";
+        width: 80%;
+        justify-items: center;
     }
 
-    @media screen and (orientation:landscape) {
-        font-size: var(--text-md);
+
+    & span {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3px;
+        color: rgb(var(--business-grey));
+        font-size: var(--text-xl);
+        text-align: center;
+
+
+        @media screen and (max-width:900px) {
+            font-size: var(--text-sm);
+            width: 6rem;
+        }
+
+        @media screen and (min-width:901px) {
+            font-size: var(--text-lg);
+        }
+
+        & :hover {
+            transition: 0.5s;
+            filter: brightness(1.5);
+        }
     }
-}
 
-.stats .value {
-    color: rgb(var(--business-gold));
+    & .value {
+        color: rgb(var(--business-gold));
 
-    @media screen and (orientation:portrait) {
-        font-size: var(--text-lg);
-    }
+        @media screen and (max-width:900px) {
+            font-size: var(--text-lg);
+        }
 
-    @media screen and (orientation:landscape) {
-        font-size: var(--text-3xl);
+        @media screen and (min-width:901px) {
+            font-size: var(--text-3xl);
+        }
     }
 }

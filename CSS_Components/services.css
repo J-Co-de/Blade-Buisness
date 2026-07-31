@@ -1,5 +1,5 @@
 .services {
-display: grid;
+    display: grid;
     background-color: rgb(var(--background-variant2));
 }
 
@@ -11,10 +11,37 @@ display: grid;
     align-items: center;
     max-width: 1400px;
     width: 100%;
+
+    & footer {
+        background-color: rgb(var(--business-dark), 0.3);
+        border: 0.5px solid rgb(var(--business-dark), 0.5);
+        width: 100%;
+        margin-top: 1.5rem;
+        padding: 0.75rem;
+        color: rgb(var(--business-grey));
+
+        @media screen and (max-width:900px) {
+            font-size: var(--text-sm);
+        }
+
+        @media screen and (min-width:901px) {
+            font-size: var(--text-md);
+        }
+    }
+
+    & footer h3 {
+        @media screen and (max-width:900px) {
+            font-size: var(--text-sm);
+        }
+
+        @media screen and (min-width:901px) {
+            font-size: var(--text-md);
+        }
+    }
 }
 
 .service-cards {
-    @media screen and (orientation:portrait) {
+    @media screen and (max-width:900px) {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -22,48 +49,39 @@ display: grid;
 
     }
 
-    @media screen and (orientation:landscape) {
+    @media screen and (min-width:901px) {
         display: grid;
         grid-template-areas:
             "restoration customization"
             "sharpening handle";
     }
 
-}
-
-.service-cards .card {
-    background-color: rgb(var(--background-variant1));
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    width:100%;
-    max-width: 700px;
-    padding: 1rem;
-    border: 0.5px solid rgb(var(--business-dark));
-
-}
-
-.card:hover {
-    transition: 0.5s;
-    filter: brightness(1.5);
-}
-
-
-.card svg {
-    color: rgb(var(--business-white));
-
-}
-
-.card p {
-    color: rgb(var(--business-grey));
-
-    @media screen and (orientation:portrait) {
-        font-size: var(--text-md);
+    & .card {
+        background-color: rgb(var(--background-variant1));
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        width: 100%;
+        padding: 1rem;
+        border: 0.5px solid rgb(var(--business-dark));
     }
 
-    @media screen and (orientation:landscape) {
-        font-size: var(--text-lg);
+    & .card svg {
+        color: rgb(var(--business-white));
     }
+
+    & .card p {
+        color: rgb(var(--business-grey));
+
+        @media screen and (max-width:900px) {
+            font-size: var(--text-md);
+        }
+
+        @media screen and (min-width:901px) {
+            font-size: var(--text-lg);
+        }
+    }
+
 }
 
 .card-header {
@@ -75,31 +93,11 @@ display: grid;
 .price {
     color: rgb(var(--business-gold));
 
-    @media screen and (orientation:portrait) {
+    @media screen and (max-width:900px) {
         font-size: var(--text-md);
     }
 
-    @media screen and (orientation:landscape) {
+    @media screen and (min-width:901px) {
         font-size: var(--text-lg);
     }
-}
-
-.services footer {
-    background-color: rgb(var(--business-dark), 0.3);
-    border: 0.5px solid rgb(var(--business-dark), 0.5);
-    margin-top: 1.5rem;
-    padding: 0.75rem;
-    color: rgb(var(--business-grey));
-
-    @media screen and (orientation:portrait) {
-        font-size: var(--text-sm);
-    }
-
-    @media screen and (orientation:landscape) {
-        font-size: var(--text-md);
-    }
-}
-
-.services footer strong {
-    color: rgb(var(--business-white));
 }

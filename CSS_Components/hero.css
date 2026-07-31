@@ -1,30 +1,32 @@
 /* ===========================
-   HEADER BASE
+   HERO BASE
    =========================== */
 .hero {
   position: relative;
-  background-color: rgb(var(--background-variant1));
-  isolation: isolate;
   display: grid;
+  isolation: isolate;
+  background-color: rgb(var(--background-variant1));
   border-bottom: 1px solid rgb(var(--business-dark));
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    opacity: 0.1;
+    z-index: -1;
+    pointer-events: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../Images/hero.jpg");
+  }
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  opacity: 0.1;
-  z-index: -1;
-  pointer-events: none;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("../Images/hero.jpg");
 
-}
-
+/* ===========================
+   HERO CONTAINER
+   =========================== */
 .hero-container {
   display: flex;
   width: 100%;
@@ -32,18 +34,19 @@
   justify-self: center;
   padding: 4vw 3vw;
 
-  @media screen and (orientation: portrait) {
+  @media screen and (max-width:900px) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
-  @media screen and (orientation: landscape) {
+  @media screen and (min-width:901px) {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
 }
+
 
 /* ===========================
    HERO CONTENT
@@ -52,54 +55,70 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-}
 
+  /* --- Heading --- */
+  & h1 {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
 
+    & span {
+      font-weight: 800;
+      text-wrap: nowrap;
 
-/* ===========================
-   HEADING
-   =========================== */
-.hero-content h1 {
-  display: flex;
-  flex-direction: column;
-  text-align: start;
-}
+      @media screen and (min-width:901px) {
+        font-size: var(--text-5xl);
+      }
 
-.hero-content h1 span {
-  font-weight: 800;
-  text-wrap: nowrap;
-
-  @media screen and (orientation:landscape) {
-    font-size: clamp(var(--text-6xl), 10vw, var(--text-7xl));
+      @media screen and (max-width:900px) {
+        font-size: clamp(var(--text-2xl), 7.5vw, var(--text-5xl));
+      }
+    }
   }
 
-  @media screen and (orientation:portrait) {
-    font-size: clamp(var(--text-4xl), 10vw, var(--text-6xl))
-  }
-}
+  /* --- Paragraph --- */
+  & p {
+    min-width: 280px;
+    width: 85vw;
+    max-width: 550px;
+    line-height: 30px;
+    text-align: start;
+    color: rgb(var(--business-grey));
 
-/* ===========================
-   PARAGRAPH
-   =========================== */
-.hero-content p {
-  min-width: 280px;
-  width: 85vw;
-  max-width: 550px;
-  line-height: 30px;
-  text-align: start;
-  color: rgb(var(--business-grey));
+    @media screen and (max-width:900px) {
+      font-size: var(--text-md);
+    }
 
-  @media screen and (orientation:portrait) {
-    font-size: var(--text-md);
+    @media screen and (min-width:901px) {
+      font-size: var(--text-lg);
+    }
   }
 
-  @media screen and (orientation:landscape) {
+  /* --- Buttons --- */
+  & a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    text-wrap: nowrap;
     font-size: var(--text-lg);
+    transition: 0.3s;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+
+    }
+
+    &:active {
+      filter: brightness(1.5);
+    }
   }
 }
 
+
 /* ===========================
-   BUTTONS
+   BUTTON GROUP
    =========================== */
 .buttons {
   display: flex;
@@ -114,15 +133,6 @@
   }
 }
 
-.hero a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 1.5rem;
-  text-wrap: nowrap;
-  font-size: var(--text-lg);
-}
-
 .book-btn {
   background-color: rgb(var(--business-gold));
   color: rgb(var(--background-variant1));
@@ -134,17 +144,6 @@
   color: rgb(var(--business-grey));
 }
 
-.hero a:hover,
-.hero a:focus {
-  transform: scale(1.1);
-  transition: 0.3s;
-}
-
-.hero a:active {
-  transition: 0.3s;
-  filter: brightness(1.5);
-}
-
 .divider {
   border-color: rgb(var(--business-dark));
   min-width: 265px;
@@ -152,8 +151,9 @@
   max-width: 550px;
 }
 
+
 /* ===========================
-   subpoints
+   SUBPOINTS
    =========================== */
 .subpoints {
   display: flex;
@@ -162,74 +162,60 @@
   min-width: 265px;
   width: 85vw;
   max-width: 550px;
-}
 
-.subpoints li {
-  text-wrap: nowrap;
-  color: rgb(var(--business-grey));
-  list-style: none;
-  font-size: var(--text-md);
+  & li {
+    list-style: none;
+    text-wrap: nowrap;
+    color: rgb(var(--business-grey));
+    font-size: clamp(var(--text-xs), 1.4vw, var(--text-sm));
 
-  @media screen and (max-width:525px) {
-    display: flex;
-    flex-direction: column;
-
+    @media screen and (max-width:550px) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }
 
 .yellow-diamond {
-  width: 1ch;
-  height: 1ch;
+  width: 0.5rem;
+  height: 0.5rem;
   background-color: rgb(var(--business-gold));
   transform: rotate(45deg);
 }
 
+
 /* ===========================
-   PORTRAIT
+   PORTRAIT SECTION
    =========================== */
 .portrait {
-  @media (orientation: landscape) {
+  @media (min-width:901px) {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     justify-self: end;
+    height:100%;
   }
 
-  @media (max-width:1000px) {
+  @media (max-width:1050px) {
     display: none;
   }
-}
 
-.portrait img {
-  width: 25rem;
-  margin-bottom: 10px;
-  border: rgb(var(--background-variant1)) 3px solid;
-}
+  & img {
+    width: 25rem;
+    border: rgb(var(--background-variant1)) 3px solid;
+  }
 
-.portrait .portrait-name {
-  width: 25rem;
-  display: flex;
-  flex-direction: column;
-  color: rgb(var(--business-white));
-
-  @media screen and (orientation:portrait) {
+  & .portrait-name {
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    color: rgb(var(--business-white));
     font-size: var(--text-xl);
   }
 
-  @media screen and (orientation:landscape) {
-    font-size: var(--text-2xl);
-  }
-}
-
-.portrait .portrait-title {
-  @media screen and (orientation:portrait) {
+  & .portrait-title {
+    color: rgb(var(--business-grey));
     font-size: var(--text-lg);
   }
-
-  @media screen and (orientation:landscape) {
-    font-size: var(--text-xl);
-  }
-
-  color: rgb(var(--business-grey));
 }

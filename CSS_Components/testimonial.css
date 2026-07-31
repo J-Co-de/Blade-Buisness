@@ -16,73 +16,70 @@
 .testimonial-cards {
     display: flex;
     gap: 1rem;
+    max-width: 94vw;
 
-    @media screen and (orientation:portrait) {
+    @media screen and (max-width:900px) {
         flex-direction: column;
     }
-}
 
-.testimonial-cards .card {
-    padding: 1rem;
-    background-color: rgb(var(--background-variant2));
-    border: 1px solid rgb(var(--business-dark));
-
-}
-
-.testimonial-cards blockquote {
-    color: rgb(var(--business-white));
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-
-    @media screen and (orientation:portrait) {
-        font-size: var(--text-md);
+    & .card {
+        padding: 1rem;
+        background-color: rgb(var(--background-variant2));
+        border: 1px solid rgb(var(--business-dark));
     }
 
-    @media screen and (orientation:landscape) {
-        font-size: var(--text-lg);
+    & blockquote {
+        color: rgb(var(--business-white));
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        @media screen and (max-width:900px) {
+            font-size: var(--text-md);
+        }
+
+        @media screen and (min-width:901px) {
+            font-size: var(--text-lg);
+        }
     }
-}
 
-.testimonial-cards blockquote hr {
-    border-color: rgb(var(--business-dark));
-}
+    & blockquote .full-name {
+        font-weight: 400;
+        font-size: var(--text-2xl);
+    }
 
-.testimonial-cards cite {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
+    & blockquote .role {
+        color: rgba(var(--business-grey), 0.8);
+    }
 
-.testimonial-cards .name {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
+    & hr {
+        border-color: rgb(var(--business-dark));
+    }
 
-.testimonial-cards .initials {
-    display: inline;
-    color: rgb(var(--business-gold));
-    border: 1px solid rgb(var(--business-gold));
-    background-color: rgba(var(--business-gold), 0.2);
-    width: fit-content;
-    border-radius: 100%;
-    padding: 0.3rem;
+    & cite {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
 
-}
+    & .name {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
 
+    & .initials {
+        display: inline;
+        color: rgb(var(--business-gold));
+        border: 1px solid rgb(var(--business-gold));
+        background-color: rgba(var(--business-gold), 0.2);
+        width: fit-content;
+        border-radius: 100%;
+        padding: 0.3rem;
+    }
 
-.testimonial-cards blockquote .full-name {
-    font-weight: 400;
-    font-size: var(--text-2xl);
-}
-
-
-.testimonial-cards blockquote .role {
-    color: rgba(var(--business-grey), 0.8);
-}
-
-.testimonial-cards .quote-mark {
-    font-size: var(--text-3xl);
-    color: rgb(var(--business-gold));
+    & .quote-mark {
+        font-size: var(--text-3xl);
+        color: rgb(var(--business-gold));
+    }
 }
