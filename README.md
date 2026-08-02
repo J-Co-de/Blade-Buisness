@@ -10,7 +10,7 @@ A simple and polished one-page website for a blade restoration business.
 ![GitHub Pages](https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-181717?style=for-the-badge&logo=github)
 
 ## Preview
-![Project Screenshot](Images/preview.png)
+![Project Screenshot](Images/preview.webp)
 
 ## Live Demo
 [Live Link](https://j-co-de.github.io/Blade-Buisness/)
