@@ -29,6 +29,21 @@ html {
   scroll-padding-top: var(--nav-height);
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0s !important;
+  }
+}
+
 img,
 picture,
 video,
@@ -61,14 +76,17 @@ a {
 }
 
 
-.skip-link:focus,
-.skip-link:focus-visible {
-  transform: translateY(15%);
-}
+@media (hover: hover) and (pointer: fine) {
 
-:focus-visible {
-  outline: 1px solid rgb(var(--business-gold));
-  outline-offset: 2px;
+  .skip-link:focus,
+  .skip-link:focus-visible {
+    transform: translateY(15%);
+  }
+
+  :focus-visible {
+    outline: 1px solid rgb(var(--business-gold));
+    outline-offset: 2px;
+  }
 }
 
 /* Variables */
@@ -260,9 +278,11 @@ main {
   }
 }
 
-.card:hover {
-  transition: 0.5s;
-  filter: brightness(1.5);
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    transition: 0.5s;
+    filter: brightness(1.5);
+  }
 }
 
 hr {

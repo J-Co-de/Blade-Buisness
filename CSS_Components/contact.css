@@ -42,9 +42,11 @@
     width: 100%;
     padding-top: 1.5rem;
     max-width: 94vw;
+    color: rgb(var(--business-white));
 
     & li {
-        padding: 2rem 0;
+        padding: clamp(1rem, 2vw, 3rem) 0;
+
 
         color: rgb(var(--business-white));
         display: flex;
@@ -64,18 +66,20 @@
             border-bottom: 1px solid rgb(var(--business-dark));
         }
     }
+
+    & li h3 {
+        color: rgba(var(--business-grey), 0.9);
+        font-size: var(--text-lg);
+        width: 2rem;
+    }
+
+    & .email {
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
 }
 
-& li h3 {
-    color: rgba(var(--business-grey), 0.9);
-    font-size: var(--text-lg);
-    width: 2rem;
-}
 
-& .email {
-    overflow-wrap: anywhere;
-    word-break: break-word;
-}
 
 .contact-form {
     display: flex;
@@ -133,14 +137,18 @@
         color: rgb(var(--business-white));
     }
 
-    & button:hover,
-    & button:focus {
-        transform: scale(1.07);
+    @media (hover: hover) and (pointer: fine) {
 
-    }
+        & button:hover,
+        & button:focus {
+            transform: scale(1.07);
+        }
 
-    & button:active {
-        filter: brightness(1.5);
+        & button:active {
+            filter: brightness(1.5);
+        }
+
+
     }
 
 

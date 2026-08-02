@@ -36,7 +36,7 @@ footer {
 
     & hr {
         grid-area: hr;
-        margin: 2rem 0;
+        margin: clamp(1rem, 2vw, 2rem) 0;
         border-color: rgba(var(--business-grey), 0.6)
     }
 }
@@ -49,6 +49,8 @@ footer {
 .bottom-right {
     justify-self: end;
 }
+
+
 
 .top-left {
     grid-area: top-left;
@@ -94,4 +96,11 @@ footer {
     & li {
         padding-top: 1rem;
     }
+}
+
+.trademark {
+    @media screen and (max-width:900px) {
+        margin-top: 0.5rem;
+    }
+
 }

@@ -31,14 +31,16 @@ nav {
 
 .nav.business-name {
 
-  &:first-of-type:hover,
-  &:focus {
-    transition: 0.2s;
-    transform: scale(1.1);
-  }
+  @media (hover: hover) and (pointer: fine) {
+    &:first-of-type:hover,
+    &:focus {
+      transition: 0.2s;
+      transform: scale(1.1);
+    }
 
-  &:active {
-    filter: brightness(1.5);
+    &:active {
+      filter: brightness(1.5);
+    }
   }
 }
 
@@ -70,17 +72,21 @@ nav .links {
     color: rgb(var(--background-variant1));
   }
 
-  & li:hover {
-    transform: scale(0.95);
-    opacity: 0.8;
-  }
+  @media (hover: hover) and (pointer: fine) {
+    & li:hover,
+    & li:focus-within {
+      transform: scale(0.95);
+      opacity: 0.8;
+    }
 
-  & li:hover a:not(.btn.primary) {
-    border-bottom: 2px solid rgb(var(--business-gold));
-  }
+    & li:hover a:not(.btn.primary),
+    & li:focus-within a:not(.btn.primary) {
+      border-bottom: 2px solid rgb(var(--business-gold));
+    }
 
-  & li:active {
-    filter: brightness(1.5);
+    & li:active {
+      filter: brightness(1.5);
+    }
   }
 
   & a {

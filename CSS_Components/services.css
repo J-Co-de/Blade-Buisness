@@ -88,10 +88,18 @@
     display: flex;
     justify-content: space-between;
     align-items: end;
+
+    & h3 {
+        min-width: 200px;
+        width: 50%;
+    }
 }
 
-.price {
+
+
+& .price {
     color: rgb(var(--business-gold));
+    text-align: end;
 
     @media screen and (max-width:900px) {
         font-size: var(--text-md);
