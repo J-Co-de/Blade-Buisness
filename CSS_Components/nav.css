@@ -16,7 +16,7 @@ nav {
   width: 100%;
   max-width: 1400px;
   min-height: 3rem;
-  padding: 1vw 3vw;
+  padding: clamp(1rem, 2vh, 3rem) clamp(1rem, 3vw, 3rem);
 }
 
 /* ===========================
@@ -32,6 +32,7 @@ nav {
 .nav.business-name {
 
   @media (hover: hover) and (pointer: fine) {
+
     &:first-of-type:hover,
     &:focus {
       transition: 0.2s;
@@ -73,6 +74,7 @@ nav .links {
   }
 
   @media (hover: hover) and (pointer: fine) {
+
     & li:hover,
     & li:focus-within {
       transform: scale(0.95);

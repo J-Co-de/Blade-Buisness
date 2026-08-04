@@ -17,10 +17,6 @@
     max-width: 1400px;
     width: 100%;
 
-    @media screen and (min-width:401px) {
-        padding: 1vw 3vw;
-    }
-
     @media screen and (max-width:400px) {
         display: grid;
         grid-template-areas:
